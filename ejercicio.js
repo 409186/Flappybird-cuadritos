@@ -9,8 +9,8 @@ const myGameArea = {
     canvas: document.createElement("canvas"),
     frames: 0,
     start: function() {
-        this.canvas.width = 500
-        this.canvas.height = 270
+        this.canvas.width = 600
+        this.canvas.height = 370
         this.context = this.canvas.getContext("2d")
         document.body.appendChild(this.canvas)
 
@@ -27,7 +27,7 @@ const myGameArea = {
         const points = Math.floor(this.frames / 5)
 
         this.context.font = "18px arial"
-        this.context.fillStyle = "black"
+        this.context.fillStyle = "blue"
         this.context.fillText(`Score: ${points}`, 350, 50)
         
 
@@ -151,7 +151,7 @@ const checkGameOver = () => {
 // EJECUCIONES
 myGameArea.start()
 
-const player = new Component(30,30, "red", 0, 110)
+const player = new Component(30,30, "yellow", 0, 110)
 
 // EVENTOS
 document.addEventListener("keydown", (e) => {
